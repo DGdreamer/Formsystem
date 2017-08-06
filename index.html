@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formsystem</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-select.min.css" rel="stylesheet">
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap-select.min.js" type="text/javascript"></script>
+</head>
+<style>
+  body,html
+  {
+    font-size: 12px;
+    padding: 0.2rem;
+  }
+  .title
+  {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+</style>
+<body>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">表单系统</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="control-label col-lg-2">姓名:</label>
+          <div class="col-lg-4">
+            <input type="text" id="name" class="form-control">
+          </div>
+          <label  class="control-label col-lg-2" for="tel">手机号:</label>
+          <div class="col-lg-4">
+            <input type="tel" class="form-control" id="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="control-label col-lg-2" for="sex">性别:</label>
+          <div class="col-lg-4" >
+          <select class="form-control" onchange="selectOnchang(this)" id="sex">
+            <option value="男">男性</option>
+            <option value="女">女性</option>
+          </select>
+          </div>
+          <label  class="control-label col-lg-2" for="qq">QQ:</label>
+          <div class="col-lg-4">
+            <input type="text" class="form-control" id="qq">
+          </div>
+        </div>
+          <div class="form-group" style="padding-left: 0.1rem">
+            <label  class="control-label col-lg-2" for="class" >所在班级:</label>
+            <div class="col-lg-4">
+            <input type="text" class="form-control" id="class">
+            </div>
+            <label  class="control-label col-lg-2" for="department">报名部门:</label>
+            <div class="col-lg-4">
+              <select class="form-control" id="department">
+                <option value="1">第一部门</option>
+                <option value="2">第二部门</option>
+                <option value="3">第三部门</option>
+                <option value="4">第四部门</option>
+                <option value="5">第五部门</option>
+              </select>
+            </div>
+    </div>
+        <div class="form-group" >
+          <label class="control-label col-lg-2" for="hobby">个人特长及爱好:</label>
+          <textarea  rows="5" class="col-lg-10 form-control " style="width: 80%;margin-left:2%" id="hobby"></textarea>
+        </div>
+        <div class="form-group ">
+          <label class="control-label col-lg-2" for="resume">个人简历:</label>
+          <textarea  rows="5" class="col-lg-10 form-control " style="width: 80%;margin-left:2%" id="resume"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">提交表单</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+    function selectOnchang(obj){
+        var value = obj.options[obj.selectedIndex].value;
+        alert(value);
+    }
+</script>
+</body>
+</html>
